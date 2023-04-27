@@ -1,12 +1,86 @@
 "use client";
-import Image from "next/image";
-import React, { useState } from "react";
-import BA from "../../public/BG-A.jpg";
-import {
-  ArrowLongRightIcon,
-  ArrowLongLeftIcon,
-} from "@heroicons/react/24/solid";
 
+import Image from "next/image";
+import React, { useEffect, useState } from "react";
+import { motion } from "framer-motion";
+
+function Carrusel() {
+  const [slideIndex, setSlideIndex] = useState(0);
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setSlideIndex((prevIndex) =>
+        prevIndex === Carusels.length - 1 ? 0 : prevIndex + 1
+      );
+    }, 2000); // Cambia 2000 a la cantidad de milisegundos que quieres para el cambio de imagen (2 segundos en este caso)
+    return () => {
+      clearInterval(intervalId);
+    };
+  }, []);
+
+
+  return (
+    <>
+      <div className="bg-white w-full grid lg:grid-cols-2 md:grid-cols-1 lg:px-[10rem] md:px-[5rem] sm:px-[0rem] xs:px-[0rem] relative  h-3/4  ">
+        {/*Carrusel  <Carrusel />*/}
+        
+        <div className="flex flex-col pt-24   xs:px-3 gap-5">
+
+          <motion.p className="font-bold text-5xl max-w-xl ">
+          Find your dream sneakers
+          </motion.p>
+          <motion.p className="max-w-xl "> 
+          Welcome to our web of sneakers, where style meets comfort and passion meets culture. Explore the latest releases, iconic classics,
+          and everything in between. Join our community of sneakerheads and find your perfect pair of kicks.
+          </motion.p>
+        </div>
+        <div className="flex ">
+   
+          <Image
+            key={slideIndex}
+            src={Carusels[slideIndex].image}
+            alt=""
+            width={500}
+            height={500}
+            className=" -rotate-45 lg:w-[40rem] md:w-[30rem]  sm:w-[30rem] xs:w-[30rem]  "
+          />
+        </div>
+      </div>
+    </>
+  );
+}
+
+export default Carrusel;
+
+const TitlesShow = [
+  "Find your dream sneakers",
+  "The Ultimate Sneaker Collection",
+  "Where Your Sole Meets Style",
+  "A World of Sneaker Culture",
+  " Your One-Stop Shop for Footwear",
+  "A Sneaker Lover's Paradise",
+  "Finding the Perfect Pair",
+];
+const Carusels = [
+  {
+    image:
+      "https://static.nike.com/a/images/tzmrnqqixkaczkdyqlor/university-red-black-%E2%80%94-white.png",
+  },
+  {
+    image:
+      "https://static.nike.com/a/images/qr1azdeoxsfmubkeew3v/concord-black-%E2%80%94-barely-volt-%E2%80%94-bright-mango.png",
+  },
+  {
+    image:
+      "https://static.nike.com/a/images/yohqo7izg7zkmihpokwv/air-jordan-xxxi-og-green-abyss-white-%E2%80%94-ghost-green.png",
+  },
+  {
+    image:
+      "https://static.nike.com/a/images/m8gslp3yagk5mw8olauk/air-jordan-xxxi-og-cool-grey-metallic-gold-%E2%80%94-dark-grey-%E2%80%94-wolf-grey-battle-grey.png",
+  },
+];
+
+/*
 function Carrusel() {
   const [SlideIndex, setSlideIndex] = useState(0);
 
@@ -56,18 +130,4 @@ function Carrusel() {
 }
 
 export default Carrusel;
-
-const Carusels = [
-  {
-    image:
-      "https://static.nike.com/a/images/xc039s1dqknncoifzahz/air-jordan-13.png",
-  },
-  {
-    image:
-      "https://static.nike.com/a/images/d7kgfyw9idjkekci1grr/air-jordan-10.png",
-  },
-  {
-    image:
-      "https://static.nike.com/a/images/u4k4bp8ppsbg2t8llkzt/air-jordan-19.png",
-  },
-];
+*/

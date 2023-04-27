@@ -18,19 +18,18 @@ const GetData = async () => {
 async function Home() {
   const Data = await GetData();
   return (
-    <div className="flex flex-col w-full h-screen">
-      <div className="bg-black w-full  h-2/3  pt-20 ">
-        {/*Carrusel */}
-        <Carrusel />
+    <div className="grid lg:grid-rows-2 w-full  h-screen gap-5">
 
-      </div>
+      <Carrusel />
+
       <div className="w-full z-20">
-        <div className="Cards  grid lg:grid-cols-6 md:grid-cols-3 sm:grid-cols-2  bg-slate-100 p-10 gap-5 z-10 ">
+        <div className="Cards  grid lg:grid-cols-6 md:grid-cols-3 sm:grid-cols-2 xs:justify-center  bg-white p-10 gap-5 z-10 ">
 
           {Data?.map((item, index) => {
+
             return (
               <Link key={index} href={`Collection/${item.id}`} className="flex flex-col ">
-                <div className="flex w-52 relative h-60 bg-white shadow-lg rounded-lg">
+                <div className={`flex w-52 relative h-60 bg-slate-100 shadow-lg rounded-lg`}>
                   <AiOutlineHeart className="absolute w-5 h-5 right-0 m-3 z-10 " />
                   <div className="flex w-full h-full absolute justify-center items-center">
                     <Image

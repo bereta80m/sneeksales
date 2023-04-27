@@ -1,7 +1,10 @@
 "use client";
 import Image from "next/image";
 import React, { useState } from "react";
-import {ArrowLongRightIcon,ArrowLongLeftIcon,} from "@heroicons/react/24/solid";
+import {
+  ArrowLongRightIcon,
+  ArrowLongLeftIcon,
+} from "@heroicons/react/24/solid";
 function PageCarrusel({ Data }) {
   const [SlideIndex, setSlideIndex] = useState(0);
 
@@ -16,15 +19,21 @@ function PageCarrusel({ Data }) {
 
   return (
     <div className="flex items-end w-full h-screen relative">
-            <ArrowLongLeftIcon
+      <ArrowLongLeftIcon
         onClick={GoToPrev}
         className="absolute mt-20 text-white z-20 cursor-pointer left-0 self-center lg:w-16 lg:h-16 md:w-14 md:h-14 sm:w-10 sm:h-10 xs:w-10 xs:h-10 "
       />
-      <Image src={Data.shoes[SlideIndex]} className="w-[60.80rem] h-[43.90rem]  " alt="" width={1000} height={1000} />
+      <Image
+        src={Data.shoes[SlideIndex]}
+        className="lg:w-[60.80rem] lg:h-[40.50rem] md:w-[50.80rem] md:h-[25.50rem] sm:w-[48.80rem] sm:h-[40.50rem] xs:w-[38.50rem] xs:h-[25.50rem] xs:self-center "
+        alt=""
+        width={1000}
+        height={1000}
+      />
       <ArrowLongRightIcon
-          onClick={GoToNext}
-          className="absolute mt-20 text-white z-20 cursor-pointer right-0 self-center lg:w-16 lg:h-16 md:w-14 md:h-14 sm:w-10 sm:h-10 xs:w-10 xs:h-10"
-        />
+        onClick={GoToNext}
+        className="absolute mt-20 text-white z-20 cursor-pointer right-0 self-center lg:w-16 lg:h-16 md:w-14 md:h-14 sm:w-10 sm:h-10 xs:w-10 xs:h-10"
+      />
     </div>
   );
 }
