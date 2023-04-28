@@ -5,7 +5,7 @@ import { Bars3Icon, ShoppingCartIcon } from "@heroicons/react/24/solid";
 
 function Header() {
   return (
-    <header className="flex top-0 text-black items-center w-full justify-between px-10 sticky py-2  z-20">
+    <header className="flex top-0 text-black items-center w-full justify-between px-5 sticky py-2  z-20">
       <ul className="md:flex lg:flex items-center gap-5  sm:hidden xs:hidden phone:hidden  ">
         {MenuA.map((item, index) => {
           return (
@@ -17,8 +17,8 @@ function Header() {
       </ul>
 
       <div className="dropdown lg:hidden md:hidden sm:flex xs:flex bg-transparent border-none ">
-        <label tabIndex={0} className="btn m-1 focus:bg-transparent bg-transparent ">
-          <Bars3Icon className="lg:hidden md:hidden sm:flex xs:flex w-10 h-10 text-black hover:text-white" />
+        <label tabIndex={0} className="btn m-1 focus:bg-transparent bg-transparent group ">
+          <Bars3Icon className="lg:hidden md:hidden sm:flex xs:flex w-10 h-10 text-black group-hover:text-white  " />
         </label>
         <ul
           tabIndex={0}

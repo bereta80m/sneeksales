@@ -24,12 +24,12 @@ function Carrusel() {
       <div className="bg-white w-full grid lg:grid-cols-2 md:grid-cols-1 lg:px-[10rem] md:px-[5rem] sm:px-[0rem] xs:px-[0rem] relative  h-3/4  ">
         {/*Carrusel  <Carrusel />*/}
         
-        <div className="flex flex-col pt-24   xs:px-3 gap-5">
+        <div className="flex flex-col pt-24 xs:px-3 phone:px-5 gap-5">
 
-          <motion.p className="font-bold text-5xl max-w-xl ">
+          <motion.p className="font-bold text-5xl lg:max-w-xl md:max-w-xl phone:max-w-sm ">
           Find your dream sneakers
           </motion.p>
-          <motion.p className="max-w-xl "> 
+          <motion.p className="lg:max-w-xl md:max-w-xl phone:max-w-sm "> 
           Welcome to our web of sneakers, where style meets comfort and passion meets culture. Explore the latest releases, iconic classics,
           and everything in between. Join our community of sneakerheads and find your perfect pair of kicks.
           </motion.p>
@@ -42,7 +42,7 @@ function Carrusel() {
             alt=""
             width={500}
             height={500}
-            className=" -rotate-45 lg:w-[40rem] md:w-[30rem]  sm:w-[30rem] xs:w-[30rem]  "
+            className=" -rotate-45 lg:w-[40rem] md:w-[30rem]  sm:w-[30rem] xs:w-[30rem] phone:w-[20rem] "
           />
         </div>
       </div>

@@ -23,7 +23,7 @@ async function Home() {
       <Carrusel />
 
       <div className="w-full z-20">
-        <div className="Cards  grid lg:grid-cols-6 md:grid-cols-3 sm:grid-cols-2 xs:justify-center  bg-white p-10 gap-5 z-10 ">
+        <div className="Cards  grid lg:grid-cols-6 md:grid-cols-3 sm:grid-cols-2 xs:justify-center phone:justify-center  bg-white p-10 gap-5 z-10 ">
 
           {Data?.map((item, index) => {
 
