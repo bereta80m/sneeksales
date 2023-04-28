@@ -21,7 +21,7 @@ function PageCarrusel({ Data }) {
     <div className="flex w-full relative">
       <ArrowLongLeftIcon
         onClick={GoToPrev}
-        className="absolute mt-20 text-black self-center z-20 cursor-pointer left-0 lg:w-16 lg:h-16 md:w-14 md:h-14 sm:w-10 xs:w-10 phone:w-6 phone:h-6 phone:ml-2  sm:h-10 xs:h-10  "
+        className="absolute mt-20 text-black self-center z-20 cursor-pointer left-0 lg:w-16 lg:h-16 md:w-14 md:h-14 sm:w-10 xs:w-10 phone:w-6 small-phone:w-6 phone:h-6 phone:ml-2  sm:h-10 xs:h-6 small-phone:h-6 "
       />
       <Image
         src={Data.shoes[SlideIndex]}
@@ -32,7 +32,7 @@ function PageCarrusel({ Data }) {
       />
       <ArrowLongRightIcon
         onClick={GoToNext}
-        className="absolute mt-20 text-black z-20 self-center cursor-pointer right-0 lg:w-16 lg:h-16 md:w-14 md:h-14 sm:w-10  xs:w-10 phone:w-6 phone:mr-2  sm:h-10 xs:h-10 phone:h-6"
+        className="absolute mt-20 text-black z-20 self-center cursor-pointer right-0 lg:w-16 lg:h-16 md:w-14 md:h-14 sm:w-10  xs:w-10 phone:w-6 small-phone:w-6 phone:mr-2  sm:h-10 xs:h-10 phone:h-6 small-phone:h-6 "
       />
     </div>
   );

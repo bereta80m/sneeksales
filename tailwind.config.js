@@ -18,6 +18,7 @@ module.exports = {
       },
     },
     screens: {
+      'small-phone': '320px',
       'phone': '360px',
        // => @media (min-width: 460px) { ... }
       'xs': '440px',

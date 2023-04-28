@@ -6,7 +6,7 @@ import { Bars3Icon, ShoppingCartIcon } from "@heroicons/react/24/solid";
 function Header() {
   return (
     <header className="flex top-0 text-black items-center w-full justify-between px-5 sticky py-2  z-20">
-      <ul className="md:flex lg:flex items-center gap-5  sm:hidden xs:hidden phone:hidden  ">
+      <ul className="md:flex lg:flex items-center gap-5  sm:hidden xs:hidden phone:hidden small-phone:hidden  ">
         {MenuA.map((item, index) => {
           return (
             <Link key={index} href={item.routes}>
@@ -67,7 +67,7 @@ function Header() {
         </ul>
       </div>
 
-      <ul className="flex items-center gap-5  sm:hidden xs:hidden phone:hidden  lg:flex md:flex">
+      <ul className="flex items-center gap-5  sm:hidden xs:hidden phone:hidden small-phone:hidden   lg:flex md:flex">
         {MenuB.map((item, index) => {
           return (
             <Link key={index} href={item.routes}>

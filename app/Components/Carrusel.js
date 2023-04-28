@@ -34,7 +34,7 @@ function Carrusel() {
           and everything in between. Join our community of sneakerheads and find your perfect pair of kicks.
           </motion.p>
         </div>
-        <div className="flex ">
+        <div className="flex border-none ">
    
           <Image
             key={slideIndex}
@@ -42,7 +42,7 @@ function Carrusel() {
             alt=""
             width={500}
             height={500}
-            className=" -rotate-45 lg:w-[40rem] md:w-[30rem]  sm:w-[30rem] xs:w-[30rem] phone:w-[20rem] "
+            className=" -rotate-45 lg:w-[40rem] md:w-[30rem]  sm:w-[30rem] xs:w-[30rem] phone:w-[20rem] border-none  "
           />
         </div>
       </div>
